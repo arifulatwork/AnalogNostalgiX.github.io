@@ -3,21 +3,30 @@ document.addEventListener("DOMContentLoaded", function() {
     const antennaTop = document.querySelector('.antenna-top-img');
     const cablePath = document.getElementById('cable-path');
 
-    const houseRect = house.getBoundingClientRect();
-    const antennaTopRect = antennaTop.getBoundingClientRect();
+    function updateCablePath() {
+        const houseRect = house.getBoundingClientRect();
+        const antennaTopRect = antennaTop.getBoundingClientRect();
 
-    const startX = antennaTopRect.left + antennaTopRect.width / 2;
-    const startY = antennaTopRect.bottom;
-    const endX = houseRect.left + houseRect.width / 2;
-    const endY = houseRect.top + houseRect.height / 2;
+        const startX = antennaTopRect.left + antennaTopRect.width / 2;
+        const startY = antennaTopRect.bottom;
+        const endX = houseRect.left + houseRect.width / 2;
+        const endY = houseRect.top + houseRect.height / 2;
 
-    const pathData = `
-        M ${startX} ${startY}
-        C ${startX} ${startY + 50}, ${endX} ${endY - 50}, ${endX} ${endY}
-    `;
+        const pathData = `
+            M ${startX} ${startY}
+            C ${startX} ${startY + 50}, ${endX} ${endY - 50}, ${endX} ${endY}
+        `;
 
-    cablePath.setAttribute('d', pathData);
+        cablePath.setAttribute('d', pathData);
+    }
+
+    // Initial update when the page loads
+    updateCablePath();
+
+    // Update the cable path on window resize
+    window.addEventListener('resize', updateCablePath);
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const boyImg = document.querySelector('.boy-img');
