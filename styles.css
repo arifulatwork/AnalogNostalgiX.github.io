@@ -63,7 +63,7 @@ body {
     background-color: #ecf0f1; /* Light gray for window */
     position: absolute;
     top: 50px;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     border-radius: 5px;
 }
@@ -95,7 +95,7 @@ body {
     background-color: #34495e; /* Dark gray for TV */
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     border-radius: 5px;
 }
@@ -145,6 +145,18 @@ body {
     top: calc(75% + 5px); /* Position below the antenna top image */
     /* left: 50%; */
     transform: translateX(-50%);
+}
+
+.inside-boy {
+    position: absolute;
+    bottom: 10px; /* Adjusted position */
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+.inside-boy-img {
+    width: 70px; /* Adjusted width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 
