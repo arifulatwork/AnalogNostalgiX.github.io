@@ -142,9 +142,13 @@ body {
 }
 
 .antenna-top-img {
-    width: 60px; /* Increased width */
-    height: 60px; /* Increased height */
-    margin-bottom: 5px; /* Adjust spacing between antenna top and boy image */
+    width: 60px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: -30px; /* Move the antenna image 30 pixels above its original position */
+    left: 50%; /* Adjust horizontal positioning */
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the antenna image is above other elements */
 }
 
 .boy-img {
